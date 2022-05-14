@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.svg" width="128" />
+</p>
+
 ## Summary
 
 This logo was created for the Tram-One Project, it was designed by Daniel Jurman.
