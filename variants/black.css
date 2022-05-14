@@ -1,12 +1,12 @@
-svg {
+svg.tram-one-logo {
   -webkit-filter: grayscale(100%) brightness(69%) contrast(200%);
 }
 
-.tram-body {
+svg.tram-one-logo .tram-body {
   stroke: #91bfc8;
   stroke-width: 8px;
 }
 
-.tram-windows {
+svg.tram-one-logo .tram-windows {
   fill: #fff049;
 }
