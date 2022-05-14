@@ -1,0 +1,25 @@
+[
+  {
+    "input": ["./src/logo.svg"],
+    "output": [
+      ["./dist/color_32x32.png", "pad", "32:32"],
+      ["./dist/color_64x64.png", "pad", "64:64"],
+      ["./dist/color_128x128.png", "pad", "128:128"],
+      ["./dist/color_256x256.png", "pad", "256:256"],
+      ["./dist/color_512x512.png", "pad", "512:512"],
+      ["./dist/color_1024x1024.png", "pad", "1024:1024"],
+      ["./dist/black_32x32.png", "pad", "32:32", "@import url(\"http://localhost:4455/variants/black.css\"); svg{}"],
+      ["./dist/black_64x64.png", "pad", "64:64", "@import url(\"http://localhost:4455/variants/black.css\"); svg{}"],
+      ["./dist/black_128x128.png", "pad", "128:128", "@import url(\"http://localhost:4455/variants/black.css\"); svg{}"],
+      ["./dist/black_256x256.png", "pad", "256:256", "@import url(\"http://localhost:4455/variants/black.css\"); svg{}"],
+      ["./dist/black_512x512.png", "pad", "512:512", "@import url(\"http://localhost:4455/variants/black.css\"); svg{}"],
+      ["./dist/black_1024x1024.png", "pad", "1024:1024", "@import url(\"http://localhost:4455/variants/black.css\"); svg{}"],
+      ["./dist/neon_32x32.png", "pad", "32:32", "@import url(\"http://localhost:4455/variants/neon.css\"); svg{}"],
+      ["./dist/neon_64x64.png", "pad", "64:64", "@import url(\"http://localhost:4455/variants/neon.css\"); svg{}"],
+      ["./dist/neon_128x128.png", "pad", "128:128", "@import url(\"http://localhost:4455/variants/neon.css\"); svg{}"],
+      ["./dist/neon_256x256.png", "pad", "256:256", "@import url(\"http://localhost:4455/variants/neon.css\"); svg{}"],
+      ["./dist/neon_512x512.png", "pad", "512:512", "@import url(\"http://localhost:4455/variants/neon.css\"); svg{}"],
+      ["./dist/neon_1024x1024.png", "pad", "1024:1024", "@import url(\"http://localhost:4455/variants/neon.css\"); svg{}"]
+    ]
+  }
+]

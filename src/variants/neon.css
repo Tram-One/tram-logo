@@ -1,0 +1,32 @@
+:root {
+  background: black;
+}
+.tram-logo g {
+  fill: none;
+  stroke-width: 8px;
+}
+.tram-roof {
+  stroke: #91bfc8;
+}
+.tram-body {
+  stroke: #ed1c24;
+}
+.tram-windows g {
+  stroke: white;
+  stroke-width: 5px;
+}
+.tram-front-light .light-circle {
+  stroke: #fff049;
+  stroke-width: 5px;
+}
+.tram-front-light .light-rays {
+  fill: #fff049;
+}
+.front-rail,
+.back-rail {
+  stroke: #91bfc8;
+}
+.front-bars path,
+.back-bars path {
+  fill: #91bfc8;
+}
