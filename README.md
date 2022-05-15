@@ -4,7 +4,7 @@
 
 ## Summary
 
-This logo was created for the Tram-One Project, it was designed by Daniel Jurman.
+This logo was created for the Tram-One Project, it was designed by [Daniel Jurman](https://danieljurman.com/).
 This version is built off of a single SVG. It uses svgexport to build png variants.
 
 Additionally, you may import this as a javascript module. This will give you access to the png and svg files in your project.
@@ -68,7 +68,3 @@ npm ci
 npm run serve
 npm run build
 ```
-
-## Links
-
-You can check out more of Daniel Jurman's work at the following link: http://www.danieljurman.com/
