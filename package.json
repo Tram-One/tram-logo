@@ -1,0 +1,34 @@
+{
+  "name": "@tram-one/tram-logo",
+  "version": "4.0.0",
+  "description": "This logo was created for the Tram-One Project, designed by Daniel Jurman",
+  "main": "logo.svg",
+  "files": [
+    "dist",
+    "variants",
+    "logo.svg"
+  ],
+  "scripts": {
+    "serve": "serve variants -p 4455",
+    "prebuild": "rm -rf dist && mkdir -p dist",
+    "build": "svgexport export_options.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tram-One/tram-logo.git"
+  },
+  "author": {
+    "name": "Jesse Jurman",
+    "email": "j.r.jurman@gmail.com",
+    "url": "https://jrjurman.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tram-One/tram-logo/issues"
+  },
+  "homepage": "https://github.com/Tram-One/tram-logo#readme",
+  "devDependencies": {
+    "serve": "^13.0.2",
+    "svgexport": "^0.4.2"
+  }
+}
