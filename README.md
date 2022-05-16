@@ -7,23 +7,21 @@
 This logo was created for the Tram-One Project, it was designed by [Daniel Jurman](https://danieljurman.com/).
 This version is built off of a single SVG. It uses svgexport to build png variants.
 
-Additionally, you may import this as a javascript module. This will give you access to the png and svg files in your project.
+Additionally, you may import this as a javascript module. This will give you access to the png files, svg files, or svg element in your project.
 
 ## Usage
 
 You can use any of the assets in your projects by directly refrencing the assets from npm.
 
-You can get the svg by pulling directly from the root, or an image from pulling from a specific png found in `dist`:
+### SVG
+
+You can get the svg by pulling directly from the root
 
 ```
 https://unpkg.com/@tram-one/tram-logo@4
 ```
 
-```
-https://unpkg.com/@tram-one/tram-logo@4/dist/color_1024x1024.png
-```
-
-You can also install this as a JS module, and then point to the dist for the pngs, or import the svg directly (both of which require a bundler that supports asset imports, the following examples are using parcel).
+You can install this as a JS module, and then point to the root for the an svg path (this requires a bundler that supports asset imports, the following example is using parcel).
 
 ```
 npm i @tram-one/tram-logo
@@ -36,7 +34,23 @@ const logoElement = document.createElement("img");
 logoElement.src = logo;
 ```
 
-You can also import the rendered images directly from the module as well.
+If you want to have an inlined svg element, you can point to the `dist/element.js` to get the svg element in its entirity (this will allow you to select parts of the svg, and apply [variants](#using-variants)).
+
+```js
+import logo from "@tram-one/tram-logo/dist/element";
+
+document.appendChild(logo);
+```
+
+### PNG
+
+You can get an image from pulling from a specific png found in `dist`:
+
+```
+https://unpkg.com/@tram-one/tram-logo@4/dist/color_1024x1024.png
+```
+
+Like the svg, you can also import the rendered images directly from the module as well.
 
 ```js
 import logo from "@tram-one/tram-logo/dist/color_512x512.png";
@@ -49,14 +63,13 @@ logoElement.src = logo;
 
 This package also includes some variants of the logo, both a non-color black version, and a neon version. These can be used by importing the css associated with these variants, or directly referencing the rendered pngs.
 
-This requires loading the svg as an inline element, if you are using parcel, you can use the `bundle-text` in the import (see example below).
+This requires loading the svg as an inline element.
 
 ```js
-import logo from "bundle-text:@tram-one/tram-logo";
+import logo from "@tram-one/tram-logo/dist/element";
 import "@tram-one/tram-logo/variants/neon.css";
 
-const logoElement = document.createElement("section");
-logoElement.innerHTML = logo;
+document.appendChild(logo);
 ```
 
 ## Build Instructions
