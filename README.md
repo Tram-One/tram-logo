@@ -34,7 +34,7 @@ const logoElement = document.createElement("img");
 logoElement.src = logo;
 ```
 
-If you want to have an inlined svg element, you can point to the `dist/element.js` to get the svg element in its entirity (this will allow you to select parts of the svg, and apply [variants](#using-variants)).
+If you want to have an inlined svg element, you can point to the `dist/element.js` to get the svg element in its entirety (this will allow you to select parts of the svg with css, and apply [variants](#using-variants)). This also avoids the need for a bundler that handles svg imports.
 
 ```js
 import logo from "@tram-one/tram-logo/dist/element";
