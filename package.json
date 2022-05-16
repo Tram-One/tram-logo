@@ -1,6 +1,6 @@
 {
   "name": "@tram-one/tram-logo",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "This logo was created for the Tram-One Project, designed by Daniel Jurman",
   "main": "logo.svg",
   "files": [
