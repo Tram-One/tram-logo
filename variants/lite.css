@@ -1,0 +1,3 @@
+g.tram-logo > g:not(.tram-front-light) {
+  fill: none;
+}

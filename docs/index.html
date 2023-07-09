@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <script src="https://unpkg.com/tram-lite@2"></script>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #options {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1em;
+        margin-bottom: 3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="options">
+      <div id="color-controls">
+        <button onclick="updateVariant('color', 'white')">Color</button>
+        <button onclick="updateVariant('neon', 'black')">Neon</button>
+        <button onclick="updateVariant('black')">Black</button>
+        <button onclick="updateVariant('lite', 'black', '90 550 100 100')">Lite</button>
+      </div>
+      <div id="size-controls">
+        <button onclick="updateSize('32')">32x</button>
+        <button onclick="updateSize('64')">64x</button>
+        <button onclick="updateSize('128')">128x</button>
+        <button onclick="updateSize('256')">256x</button>
+        <button onclick="updateSize('512')">512x</button>
+      </div>
+      <div id="download-controls">
+        <button onclick="downloadPNG()">Download PNG</button>
+        <button onclick="downloadSVG()">Download SVG</button>
+      </div>
+    </div>
+
+    <script src="./preview.js"></script>
+    <script src="./download.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>

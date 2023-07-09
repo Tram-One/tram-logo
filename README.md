@@ -5,79 +5,51 @@
 ## Summary
 
 This logo was created for the Tram-One Project, it was designed by [Daniel Jurman](https://danieljurman.com/).
-This version is built off of a single SVG. It uses svgexport to build png variants.
-
-Additionally, you may import this as a javascript module. This will give you access to the png files, svg files, or svg element in your project.
 
 ## Usage
 
-You can use any of the assets in your projects by directly refrencing the assets from npm.
+### Site
 
-### SVG
+You can view and download any version of the assets by going to https://tram-one.io/tram-logo
 
-You can get the svg by pulling directly from the root
+### Unpkg
 
+You can use any of the assets in your projects by directly referencing the assets from unpkg.com.
+
+```html
+<img src="https://unpkg.com/@tram-one/tram-logo@5" width="128" />
 ```
-https://unpkg.com/@tram-one/tram-logo@4
+
+By default unpkg.com will redirect you to the Tram-One svg. You can also point to any other SVG or PNG, [see here](https://www.npmjs.com/package/@tram-one/tram-logo?activeTab=code) for different assets available.
+
+```html
+<img src="https://unpkg.com/@tram-one/tram-logo@5/dist/color_512.png" />
 ```
 
-You can install this as a JS module, and then point to the root for the an svg path (this requires a bundler that supports asset imports, the following example is using parcel).
+### npm
 
-```
+You can install the package from npm to also have the assets locally.
+
+```sh
 npm i @tram-one/tram-logo
 ```
 
-```js
-import logo from "@tram-one/tram-logo";
+From there, you can reference any asset in your node_modules.
 
-const logoElement = document.createElement("img");
-logoElement.src = logo;
+```html
+<img src="./node_modules/@tram-one/tram-logo/dist/color_512.png" />
 ```
 
-If you want to have an inlined svg element, you can point to the `dist/element.js` to get the svg element in its entirety (this will allow you to select parts of the svg with css, and apply [variants](#using-variants)). This also avoids the need for a bundler that handles svg imports.
+### Variants
 
-```js
-import logo from "@tram-one/tram-logo/dist/element";
+There are several variants, which change the styling of the logo. The CSS for creating these are available in the `variants/` folder, and are included in all of the above downloading methods.
 
-document.appendChild(logo);
-```
+The URL for all of these will be something like: `color.svg`, `color_64.png`, `color_128.png`,`color_512.png`.
+You can see all of the assets [on npm](https://www.npmjs.com/package/@tram-one/tram-logo?activeTab=code)
 
-### PNG
-
-You can get an image from pulling from a specific png found in `dist`:
-
-```
-https://unpkg.com/@tram-one/tram-logo@4/dist/color_1024x1024.png
-```
-
-Like the svg, you can also import the rendered images directly from the module as well.
-
-```js
-import logo from "@tram-one/tram-logo/dist/color_512x512.png";
-
-const logoElement = document.createElement("img");
-logoElement.src = logo;
-```
-
-### Using Variants
-
-This package also includes some variants of the logo, both a non-color black version, and a neon version. These can be used by importing the css associated with these variants, or directly referencing the rendered pngs.
-
-This requires loading the svg as an inline element.
-
-```js
-import logo from "@tram-one/tram-logo/dist/element";
-import "@tram-one/tram-logo/variants/neon.css";
-
-document.appendChild(logo);
-```
-
-## Build Instructions
-
-To build the logo images, and all variants, you'll need to serve the css assets, and then in a separate tab, run the build command. Once the build command has finished, you can kill the webserver.
-
-```
-npm ci
-npm run serve
-npm run build
-```
+| Version  | URL             | Preview                          |
+| -------- | --------------- | -------------------------------- |
+| Original | /dist/color\_\* | <img src="./dist/color_256.png"> |
+| Neon     | /dist/neon\_\*  | <img src="./dist/neon_256.png">  |
+| Black    | /dist/black\_\* | <img src="./dist/black_256.png"> |
+| Lite     | /dist/lite\_\*  | <img src="./dist/lite_256.png">  |
