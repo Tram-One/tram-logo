@@ -29,7 +29,7 @@ function onSVGLoad(objectNode) {
   onSizeUpdate();
 }
 
-const logoPreview = html`<logo-preview size="512"></logo-preview>`;
+const logoPreview = document.querySelector("logo-preview");
 
 const copySVGAttribute = (sourceName, targetName) => {
   const svgLogo = logoPreview.shadowRoot.querySelector("svg");
@@ -50,21 +50,3 @@ const onViewboxUpdate = () => {
 
 addAttributeListener(logoPreview, "size", onSizeUpdate);
 addAttributeListener(logoPreview, "viewbox", onViewboxUpdate);
-
-document.body.appendChild(logoPreview);
-
-function updateSize(size) {
-  logoPreview.setAttribute("size", size);
-}
-
-async function updateVariant(variant, background = "#DEDEDE", viewbox = "0 0 864 864") {
-  logoPreview.setAttribute("viewbox", viewbox);
-  logoPreview.setAttribute("background", background);
-  logoPreview.setAttribute("variant", variant);
-
-  const cssFile = await fetch(`./variants/${variant}.css`);
-  const cssContent = await cssFile.text();
-
-  const [stylePlaceholder] = queryAllDOM(".style-placeholder");
-  stylePlaceholder.innerHTML = cssContent;
-}

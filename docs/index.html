@@ -1,41 +1,27 @@
 <html>
   <head>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=0.5, width=device-width" />
     <script src="https://unpkg.com/tram-lite@2"></script>
     <style>
       body {
         text-align: center;
       }
-
-      #options {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 1em;
-        margin-bottom: 3em;
-      }
     </style>
+    <title>Tram-One - Logo</title>
+
+    <link rel="icon" type="image/png" href="https://unpkg.com/@tram-one/tram-logo@5.0.1/dist/color_32.png" />
+
+    <meta property="og:title" content="Tram-One - Logo" />
+    <meta property="og:url" content="https://tram-one.io/tram-logo/" />
+    <meta property="og:image" content="https://tram-one.io/tram-logo/preview.png" />
   </head>
   <body>
-    <div id="options">
-      <div id="color-controls">
-        <button onclick="updateVariant('color', 'white')">Color</button>
-        <button onclick="updateVariant('neon', 'black')">Neon</button>
-        <button onclick="updateVariant('black')">Black</button>
-        <button onclick="updateVariant('lite', 'black', '90 550 100 100')">Lite</button>
-      </div>
-      <div id="size-controls">
-        <button onclick="updateSize('32')">32x</button>
-        <button onclick="updateSize('64')">64x</button>
-        <button onclick="updateSize('128')">128x</button>
-        <button onclick="updateSize('256')">256x</button>
-        <button onclick="updateSize('512')">512x</button>
-      </div>
-      <div id="download-controls">
-        <button onclick="downloadPNG()">Download PNG</button>
-        <button onclick="downloadSVG()">Download SVG</button>
-      </div>
-    </div>
+    <preview-controls variant="color" size="512"></preview-controls>
 
-    <script src="./preview.js"></script>
+    <logo-preview size="512"></logo-preview>
+
+    <script src="./preview-controls.js"></script>
+    <script src="./logo-preview.js"></script>
     <script src="./download.js"></script>
     <script src="./script.js"></script>
   </body>

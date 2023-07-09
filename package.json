@@ -1,13 +1,13 @@
 {
   "name": "@tram-one/tram-logo",
-  "version": "5.0.1",
+  "version": "5.0.2",
   "description": "This logo was created for the Tram-One Project, designed by Daniel Jurman",
   "main": "dist/color.svg",
   "files": [
     "dist"
   ],
   "scripts": {
-    "start": "npx serve ."
+    "start": "npx serve docs"
   },
   "repository": {
     "type": "git",
