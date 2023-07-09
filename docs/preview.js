@@ -17,7 +17,7 @@ define`
 			}
 		</style>
 		<div id="container" svg-title="${"variant"}.svg" png-title="${"variant"}_${"size"}.png">
-			<object id="logo-object" data="../logo.svg" onload="onSVGLoad(this)"></object>
+			<object id="logo-object" data="./logo.svg" onload="onSVGLoad(this)"></object>
 		</div>
 	</logo-preview>
 `;
@@ -26,7 +26,6 @@ function onSVGLoad(objectNode) {
   // load the SVG inline
   // based on https://stackoverflow.com/a/72804140/864715
   objectNode.parentNode.replaceChild(objectNode.contentDocument.documentElement, objectNode);
-
   onSizeUpdate();
 }
 
@@ -63,7 +62,7 @@ async function updateVariant(variant, background = "#DEDEDE", viewbox = "0 0 864
   logoPreview.setAttribute("background", background);
   logoPreview.setAttribute("variant", variant);
 
-  const cssFile = await fetch(`../variants/${variant}.css`);
+  const cssFile = await fetch(`./variants/${variant}.css`);
   const cssContent = await cssFile.text();
 
   const [stylePlaceholder] = queryAllDOM(".style-placeholder");

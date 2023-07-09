@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.svg" width="512" />
+  <img src="./dist/color.svg" width="512" />
 </p>
 
 ## Summary
